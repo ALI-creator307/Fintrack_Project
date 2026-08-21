@@ -1,0 +1,71 @@
+/* ============================================
+   Budget Planner Component
+   ============================================ */
+
+.budget-planner {
+  background: var(--surface);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.budget-planner__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.budget-planner__title {
+  font-size: var(--font-md);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Budget Item */
+.budget-item {
+  margin-bottom: 13px;
+}
+
+.budget-item:last-child {
+  margin-bottom: 0;
+}
+
+.budget-item__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-sm);
+  margin-bottom: 6px;
+}
+
+.budget-item__name {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.budget-item__amount {
+  color: var(--text-muted);
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 7px;
+  background: var(--primary-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  border-radius: 10px;
+  background: var(--primary);
+  transition: width var(--transition-slow);
+}
+
+.progress-bar__fill--warn {
+  background: var(--warning);
+}
+
+.progress-bar__fill--danger {
+  background: var(--danger);
+}

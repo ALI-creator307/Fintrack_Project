@@ -1,0 +1,131 @@
+/* ============================================
+   FinTrack — CSS Variables & Base Styles
+   ============================================ */
+
+:root {
+  /* Brand Colors */
+  --primary: #7c5cfc;
+  --primary-light: #a78bfa;
+  --primary-glow: rgba(124, 92, 252, 0.35);
+  --primary-soft: #f5f0ff;
+  --primary-bg: #f0eeff;
+
+  /* Accent Colors */
+  --success: #22c55e;
+  --success-soft: #a8f0c6;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --danger-soft: #fff0f0;
+
+  /* Neutral Palette */
+  --text-primary: #1a1a2e;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --text-faint: #c4b5fd;
+
+  /* Surfaces */
+  --surface: #ffffff;
+  --surface-hover: #f9f8ff;
+  --border: #f0eeff;
+  --border-soft: #e9e3ff;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 12px rgba(0, 0, 0, 0.04);
+  --shadow-primary: 0 4px 15px rgba(124, 92, 252, 0.35);
+  --shadow-sidebar: 4px 0 20px rgba(124, 92, 252, 0.06);
+
+  /* Layout */
+  --sidebar-width: 220px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 18px;
+  --border-radius-xl: 24px;
+  --border-radius-full: 50px;
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', sans-serif;
+  --font-xs: 10.5px;
+  --font-sm: 12px;
+  --font-base: 13.5px;
+  --font-md: 15px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ============================================
+   Global Reset & Base
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-family);
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-soft);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}

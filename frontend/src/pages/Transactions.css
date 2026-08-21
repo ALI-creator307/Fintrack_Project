@@ -1,0 +1,219 @@
+/* ============================================
+   Transactions Page
+   ============================================ */
+
+.transactions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Filter Bar */
+.txn-filters {
+    background: var(--surface);
+    border-radius: var(--border-radius-lg);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-md);
+    flex-wrap: wrap;
+}
+
+.txn-filters__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-bg);
+    border-radius: var(--border-radius-md);
+    padding: 8px 14px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.txn-filters__search input {
+    background: transparent;
+    font-size: 13px;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.txn-filters__search input::placeholder {
+    color: var(--text-muted);
+}
+
+.txn-filters__search-icon {
+    font-size: 15px;
+}
+
+.filter-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: var(--border-radius-md);
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--primary-bg);
+    color: var(--text-muted);
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+.filter-chip--active {
+    background: var(--primary);
+    color: white;
+    box-shadow: var(--shadow-primary);
+}
+
+.filter-chip:hover:not(.filter-chip--active) {
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+/* Transactions Table */
+.txn-table {
+    background: var(--surface);
+    border-radius: var(--border-radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.txn-table__header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 80px;
+    padding: 0 12px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: var(--font-sm);
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.txn-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 80px;
+    padding: 13px 12px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    transition: background var(--transition-base);
+    border-radius: var(--border-radius-md);
+}
+
+.txn-row:last-child {
+    border-bottom: none;
+}
+
+.txn-row:hover {
+    background: var(--primary-bg);
+}
+
+.txn-row__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.txn-row__icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.txn-row__name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.txn-row__note {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 1px;
+}
+
+.txn-row__date {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+/* Category Badge */
+.category-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 600;
+    background: var(--primary-bg);
+    color: var(--primary);
+}
+
+/* Type Badge */
+.type-badge {
+    display: inline-flex;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+.type-badge--income {
+    background: #f0fdf4;
+    color: var(--success);
+}
+
+.type-badge--expense {
+    background: #fff1f2;
+    color: var(--danger);
+}
+
+/* Amount */
+.txn-row__amount {
+    font-size: 13.5px;
+    font-weight: 700;
+}
+
+.txn-row__amount--income {
+    color: var(--success);
+}
+
+.txn-row__amount--expense {
+    color: var(--danger);
+}
+
+/* Actions */
+.txn-row__actions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.icon-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--primary-bg);
+    transition: all var(--transition-base);
+}
+
+.icon-btn:hover {
+    background: var(--primary);
+}
+
+.icon-btn--danger:hover {
+    background: var(--danger);
+}

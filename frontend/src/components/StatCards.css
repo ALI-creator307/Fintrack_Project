@@ -1,0 +1,99 @@
+/* ============================================
+   Stat Cards Grid
+   ============================================ */
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Individual Card */
+.stat-card {
+  background: var(--surface);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card--primary {
+  background: linear-gradient(135deg, var(--primary), #9d7dfe);
+  color: white;
+}
+
+/* Card Top Row */
+.stat-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.stat-card__label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.stat-card--primary .stat-card__label {
+  color: #d4c8ff;
+}
+
+.stat-card__action {
+  width: 28px;
+  height: 28px;
+  background: var(--primary-soft);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--primary);
+  cursor: pointer;
+  transition: background var(--transition-base);
+}
+
+.stat-card--primary .stat-card__action {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.stat-card__action:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Card Value */
+.stat-card__value {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.stat-card--primary .stat-card__value {
+  color: white;
+}
+
+/* Card Change Badge */
+.stat-card__change {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--success);
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-card__change--down {
+  color: var(--danger);
+}
+
+.stat-card--primary .stat-card__change {
+  color: var(--success-soft);
+}

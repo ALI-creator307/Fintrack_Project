@@ -1,0 +1,102 @@
+/* ============================================
+   Money Flow Chart
+   ============================================ */
+
+.money-flow {
+  background: var(--surface);
+  border-radius: var(--border-radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-md);
+}
+
+.money-flow__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.money-flow__title {
+  font-size: var(--font-md);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Legend */
+.money-flow__legend {
+  display: flex;
+  gap: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.legend-item__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-item__dot--income {
+  background: var(--primary);
+}
+
+.legend-item__dot--expense {
+  background: #e0d9ff;
+}
+
+/* Chart Area */
+.money-flow__chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 140px;
+  padding: 0 4px;
+}
+
+/* Bar Group (one per month) */
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.bar-group__pair {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.bar {
+  border-radius: 6px 6px 0 0;
+  width: 16px;
+  transition: opacity var(--transition-base);
+  cursor: pointer;
+}
+
+.bar:hover {
+  opacity: 0.75;
+}
+
+.bar--income {
+  background: var(--primary);
+}
+
+.bar--expense {
+  background: #e0d9ff;
+}
+
+.bar-group__month {
+  font-size: 10px;
+  color: var(--text-faint);
+  margin-top: 8px;
+  font-weight: 500;
+}
